@@ -13,7 +13,7 @@
   <div id="graph"></div>
 
   <script type="text/jsx">
-    fetch('../datasets/miserables.json').then(res => res.json()).then(data => {
+    fetch('example/datasets/miserables.json').then(res => res.json()).then(data => {
       ReactDOM.render(
         <ForceGraph2D
           graphData={data}
