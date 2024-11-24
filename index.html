@@ -13,24 +13,29 @@
   <div id="graph"></div>
 
   <script type="text/jsx">
-    fetch('example/datasets/miserables.json').then(res => res.json()).then(data => {
+    fetch('datasets/northeastern.json').then(res => res.json()).then(data => {
       ReactDOM.render(
         <ForceGraph2D
           graphData={data}
           nodeAutoColorBy="group"
+          nodeLabel="size"
+          linkWidth="value"
+          linkCurvature={0.2} 
+          linkDirectionalArrowRelPos={1} 
+          linkDirectionalArrowLength={5}
           nodeCanvasObject={(node, ctx, globalScale) => {
             const label = node.id;
-            const fontSize = 12/globalScale;
+            const fontSize = node.size/node.group;
             ctx.font = `${fontSize}px Sans-Serif`;
             const textWidth = ctx.measureText(label).width;
             const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
 
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.fillStyle = node.color;
             ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillStyle = node.color;
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
             ctx.fillText(label, node.x, node.y);
 
             node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
