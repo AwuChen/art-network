@@ -68,6 +68,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@types/react": "^18.3.12",
     "@types/three": "^0.170.0",
+    "gh-pages": "^6.2.0",
     "rimraf": "^6.0.1",
     "rollup": "^4.26.0",
     "rollup-plugin-dts": "^6.1.1",
