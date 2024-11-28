@@ -19,7 +19,6 @@
     {"id": "Takaaki Murase", "group": 2, "size":10, "craft":"plant", "website":"https://www.replanter.com/"},
     {"id": "Masaya Kushino", "group": 2, "size":10, "craft":"shoes", "website":"https://www.instagram.com/masayakushino/?hl=en"},
     {"id": "Ko Kado", "group": 2, "size":10, "craft":"karakami", "website":"https://kamisoe.com/en/index.html"},
-    {"id": "Ko Kado", "group": 2, "size":10, "craft":"karakami", "website":"https://kamisoe.com/en/index.html"},
     {"id": "Mitsuru Yokoyama", "group": 2, "size":8, "craft":"tatami", "website":"https://yokoyamatatami.com/biography/"},
     {"id": "Kazunori Nishimura", "group": 2, "size":8, "craft":"karakami", "website":"https://maruni-kyoto.net/company/"},
     {"id": "Ariko Inaoka", "group": 2, "size":8, "craft":"soba", "website":"https://honke-owariya.co.jp/en/the-story-of-owariya/"},
@@ -29,23 +28,29 @@
     {"id": "Hirokazu Kato", "group": 2, "size":3, "craft":"pottery", "website":"https://www.cerkato.com/"},
     {"id": "Akiteru Kawai", "group": 2, "size":2, "craft":"yuzen dyeing", "website":"https://kawai1908.com/works/"},
     {"id": "Umi Chae", "group": 3, "size":9, "craft":"kinkou", "website":"https://yusai.kyoto/?lang=en"},
+    {"id": "Shiho Fukuhara", "group": 3, "size":9, "craft":"biology", "website":"https://yusai.kyoto/?lang=en"},
     {"id": "Ako Myochin", "group": 3, "size":8, "craft":"armour", "website":"https://yoroinoya.kyoto/"},
     {"id": "Fukutaro Nakayama", "group": 3, "size":8, "craft":"tea ceremony", "website":"https://www.instagram.com/xexe.meditation/"},
     {"id": "Midori Tsukada", "group": 3, "size":7, "craft":"glass", "website":"https://www.tsukadamidori.com/home/english/"},
     {"id": "Yoca Muta", "group": 3, "size":7, "craft":"ceramic", "website":"https://www.yocamuta.com/english"},
     {"id": "Nina Fradet", "group": 3, "size":5, "craft":"bamboo", "website":"https://www.hinnstudio.com/"},
-    {"id": "Terui Yamawaki", "group": 3, "size":5, "craft":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"}
+    {"id": "Hatta Shun", "group": 3, "size":5, "craft":"kumihimo", "website":"https://showenkumihimo.com/"},
+    {"id": "Teruri Yamawaki", "group": 3, "size":5, "craft":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"}
   ],
   "links": [
     {"source": "Masataka Hosoo", "target": "Yoshida Shinichiro", "value": 10},
     {"source": "Masataka Hosoo", "target": "Takahiro Yagi", "value": 7},
     {"source": "Masataka Hosoo", "target": "Hosai Matsubayashi XVI", "value": 5},
+    {"source": "Masataka Hosoo", "target": "Ako Myochin", "value": 4},    
     {"source": "Masataka Hosoo", "target": "Theaster Gates", "value": 3},
     {"source": "Masataka Hosoo", "target": "Shuji Nakagawa", "value": 3},
     {"source": "Masataka Hosoo", "target": "Toru Tsuji", "value": 3},
     {"source": "Masataka Hosoo", "target": "Tatsuyuki Kosuga", "value": 3},
+    {"source": "Masataka Hosoo", "target": "Mitsuru Yokoyama", "value": 3},
     {"source": "Masataka Hosoo", "target": "Hidehiko Matsumoto", "value": 2},
+    {"source": "Masataka Hosoo", "target": "Toryo Ito", "value": 2},    
     {"source": "Masataka Hosoo", "target": "Masayo Funakoshi", "value": 1},
+    {"source": "Masataka Hosoo", "target": "Takafumi Zenryu Kawakami", "value": 1},
 
     {"source": "Hosai Matsubayashi XVI", "target": "Masataka Hosoo", "value": 3},
     {"source": "Hosai Matsubayashi XVI", "target": "Takafumi Zenryu Kawakami", "value": 3},
@@ -76,6 +81,76 @@
     {"source": "Tatsuyuki Kosuga", "target": "Shuji Nakagawa", "value": 2},
     {"source": "Tatsuyuki Kosuga", "target": "Takahiro Yagi", "value": 2},
     {"source": "Tatsuyuki Kosuga", "target": "Hosai Matsubayashi XVI", "value": 2},
-    {"source": "Tatsuyuki Kosuga", "target": "Toru Tsuji", "value": 2}
+    {"source": "Tatsuyuki Kosuga", "target": "Toru Tsuji", "value": 2},
+
+    {"source": "Takaaki Murase", "target": "Masaya Kushino", "value": 8},
+    {"source": "Takaaki Murase", "target": "Umi Chae", "value": 4},
+    {"source": "Takaaki Murase", "target": "Shiho Fukuhara", "value": 4},
+    {"source": "Takaaki Murase", "target": "Fukutaro Nakayama", "value": 3},
+
+    {"source": "Masaya Kushino", "target": "Takaaki Murase", "value": 8},
+    {"source": "Masaya Kushino", "target": "Umi Chae", "value": 4},
+    {"source": "Masaya Kushino", "target": "Shiho Fukuhara", "value": 4},
+    {"source": "Masaya Kushino", "target": "Masataka Hosoo", "value": 3},
+    {"source": "Masaya Kushino", "target": "Fukutaro Nakayama", "value": 3},
+
+    {"source": "Umi Chae", "target": "Shiho Fukuhara", "value": 10},
+    {"source": "Umi Chae", "target": "Masaya Kushino", "value": 5},
+    {"source": "Umi Chae", "target": "Takaaki Murase", "value": 5},
+    {"source": "Umi Chae", "target": "Hatta Shun", "value": 3},
+    {"source": "Umi Chae", "target": "Fukutaro Nakayama", "value": 2},
+
+    {"source": "Shiho Fukuhara", "target": "Umi Chae", "value": 10},
+    {"source": "Shiho Fukuhara", "target": "Masaya Kushino", "value": 5},
+    {"source": "Shiho Fukuhara", "target": "Takaaki Murase", "value": 5},
+    {"source": "Shiho Fukuhara", "target": "Hatta Shun", "value": 3},
+    {"source": "Shiho Fukuhara", "target": "Fukutaro Nakayama", "value": 2},
+
+    {"source": "Toryo Ito", "target": "Fukutaro Nakayama", "value": 7},
+    {"source": "Toryo Ito", "target": "Masataka Hosoo", "value": 2},    
+
+    {"source": "Takafumi Zenryu Kawakami", "target": "Masataka Hosoo", "value": 5},
+    {"source": "Takafumi Zenryu Kawakami", "target": "Hosai Matsubayashi XVI", "value": 4},
+    {"source": "Takafumi Zenryu Kawakami", "target": "Toru Tsuji", "value": 4},
+    {"source": "Takafumi Zenryu Kawakami", "target": "Hidehiko Matsumoto", "value": 4},
+
+    {"source": "Hidehiko Matsumoto", "target": "Masataka Hosoo", "value": 5},
+    {"source": "Hidehiko Matsumoto", "target": "Takafumi Zenryu Kawakami", "value": 4},
+    {"source": "Hidehiko Matsumoto", "target": "Hosai Matsubayashi XVI", "value": 4},
+
+    {"source": "Hatta Shun", "target": "Nanjo Kobo", "value": 5},
+    {"source": "Hatta Shun", "target": "Shiho Fukuhara", "value": 3},
+    {"source": "Hatta Shun", "target": "Umi Chae", "value": 2},
+
+    {"source": "Masato Kataoka", "target": "Masataka Hosoo", "value": 1},
+
+    {"source": "Kondaya Genbei", "target": "Ariko Inaoka", "value": 1},
+
+    {"source": "Ariko Inaoka", "target": "Kondaya Genbei", "value": 1},
+
+    {"source": "Ko Kado", "target": "Mitsuru Yokoyama", "value": 1},
+
+    {"source": "Mitsuru Yokoyama", "target": "Masataka Hosoo", "value": 2},
+    {"source": "Mitsuru Yokoyama", "target": "Ko Kado", "value": 1},
+
+    {"source": "Kazunori Nishimura", "target": "Masataka Hosoo", "value": 1},
+
+    {"source": "Nanjo Kobo", "target": "Hatta Shun", "value": 5},
+
+    {"source": "Ako Myochin", "target": "Masataka Hosoo", "value": 3},
+
+    {"source": "Tanabe Chikunsai IV", "target": "Nina Fradet", "value": 3},
+    {"source": "Tanabe Chikunsai IV", "target": "Midori Tsukada", "value": 2},
+    {"source": "Tanabe Chikunsai IV", "target": "Teruri Yamawaki", "value": 2},
+    {"source": "Tanabe Chikunsai IV", "target": "Yoca Muta", "value": 2},
+
+    {"source": "Nina Fradet", "target": "Tanabe Chikunsai IV", "value": 2},
+
+    {"source": "Teruri Yamawaki", "target": "Tanabe Chikunsai IV", "value": 2},
+
+    {"source": "Midori Tsukada", "target": "Tanabe Chikunsai IV", "value": 2},
+
+    {"source": "Yoca Muta", "target": "Tanabe Chikunsai IV", "value": 2}
+
   ]
 }
