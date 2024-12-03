@@ -6,8 +6,8 @@
       flex-direction: column;
       align-items: center;
     }
-    #button-container {
-      margin: 0px;
+    #dropdown-container {
+      margin: 20px;
     }
   </style>
 
@@ -19,62 +19,72 @@
 </head>
 
 <body>
-  <div id="button-container"></div>
+  <div id="dropdown-container"></div>
   <div id="graph" style="z-index: 1;"></div>
   <script type="text/jsx">
-    // Render the button
-    const Button = () => {
-      const handleClick = () => {
-        window.open("https://awuchen.github.io/art-network/art_basel_index.html", "_self");
+    const App = () => {
+      const [dataset, setDataset] = React.useState('datasets/northeastern.json');
+
+      const handleDatasetChange = (event) => {
+        setDataset(event.target.value);
       };
 
+      React.useEffect(() => {
+        // Fetch and render the graph whenever the dataset changes
+        fetch(dataset).then(res => res.json()).then(data => {
+          ReactDOM.render(
+            <ForceGraph2D
+              graphData={data}
+              nodeAutoColorBy="group"
+              nodeLabel="size"
+              linkWidth="value"
+              linkDirectionalArrowRelPos={1}
+              linkDirectionalArrowLength={5}
+              linkCurvature={0.2}
+              nodeCanvasObject={(node, ctx, globalScale) => {
+                const label = node.id;
+                const fontSize = node.size / node.group;
+                ctx.font = `${fontSize}px Sans-Serif`;
+                const textWidth = ctx.measureText(label).width;
+                const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
+
+                ctx.fillStyle = node.color;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.size / node.group, 0, 2 * Math.PI, false);
+                ctx.fill();
+
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+                ctx.fillText(label, node.x, node.y);
+
+                node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
+              }}
+              nodePointerAreaPaint={(node, color, ctx) => {
+                ctx.fillStyle = color;
+                const bckgDimensions = node.__bckgDimensions;
+                bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
+              }}
+            />,
+            document.getElementById('graph')
+          );
+        });
+      }, [dataset]); // Re-run the effect whenever dataset changes
+
       return (
-        <button onClick={handleClick} style={{ padding: "10px 20px", fontSize: "16px" }}>
-          ART Basel Dataset
-        </button>
+        <div>
+          <div id="dropdown-container">
+            <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
+            <select id="dataset-select" value={dataset} onChange={handleDatasetChange} style={{ padding: "5px", fontSize: "16px" }}>
+              <option value="datasets/northeastern.json">Northeastern</option>
+              <option value="datasets/art_basel.json">Art Basel</option>
+              <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
+            </select>
+          </div>
+        </div>
       );
     };
 
-    ReactDOM.render(<Button />, document.getElementById('button-container'));
-
-    // Fetch data and render the graph
-    fetch('datasets/northeastern.json').then(res => res.json()).then(data => {
-      ReactDOM.render(
-        <ForceGraph2D
-          graphData={data}
-          nodeAutoColorBy="group"
-          nodeLabel="size"
-          linkWidth="value"
-          linkDirectionalArrowRelPos={1}
-          linkDirectionalArrowLength={5}
-          linkCurvature={0.2}
-          nodeCanvasObject={(node, ctx, globalScale) => {
-            const label = node.id;
-            const fontSize = node.size / node.group;
-            ctx.font = `${fontSize}px Sans-Serif`;
-            const textWidth = ctx.measureText(label).width;
-            const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
-
-            ctx.fillStyle = node.color;
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, node.size / node.group, 0, 2 * Math.PI, false);
-            ctx.fill();
-
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
-            ctx.fillText(label, node.x, node.y);
-
-            node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
-          }}
-          nodePointerAreaPaint={(node, color, ctx) => {
-            ctx.fillStyle = color;
-            const bckgDimensions = node.__bckgDimensions;
-            bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
-          }}
-        />,
-        document.getElementById('graph')
-      );
-    });
+    ReactDOM.render(<App />, document.getElementById('dropdown-container'));
   </script>
 </body>
