@@ -7,7 +7,7 @@
       align-items: center;
     }
     #dropdown-container {
-      margin: 10px;
+      margin: 20px;
     }
   </style>
 
@@ -15,7 +15,7 @@
   <script src="//unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
   <script src="//unpkg.com/@babel/standalone"></script>
 
-  <script src="//unpkg.com/react-force-graph-2d"></script>
+  <script src="//unpkg.com/react-force-graph-2d@latest"></script>
 </head>
 
 <body>
@@ -24,16 +24,17 @@
   <script type="text/jsx">
     const App = () => {
       const [dataset, setDataset] = React.useState('datasets/northeastern.json');
+      const graphRef = React.useRef();
 
       const handleDatasetChange = (event) => {
         setDataset(event.target.value);
       };
 
       React.useEffect(() => {
-        // Fetch and render the graph whenever the dataset changes
         fetch(dataset).then(res => res.json()).then(data => {
           ReactDOM.render(
             <ForceGraph2D
+              ref={graphRef}
               graphData={data}
               nodeAutoColorBy="group"
               nodeLabel="size"
@@ -41,6 +42,12 @@
               linkDirectionalArrowRelPos={1}
               linkDirectionalArrowLength={5}
               linkCurvature={0.2}
+              onEngineTick={() => {
+                if (graphRef.current) {
+                  // Add collision force
+                  graphRef.current.d3Force('collide', node => Math.sqrt(node.size) + 5);
+                }
+              }}
               nodeCanvasObject={(node, ctx, globalScale) => {
                 const label = node.id;
                 const fontSize = node.size / node.group;
@@ -48,39 +55,45 @@
                 const textWidth = ctx.measureText(label).width;
                 const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
 
+                // Draw node circle
                 ctx.fillStyle = node.color;
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, node.size / node.group, 0, 2 * Math.PI, false);
                 ctx.fill();
 
+                // Draw node label
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
                 ctx.fillText(label, node.x, node.y);
 
-                node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
+                // Save dimensions for interaction purposes
+                node.__bckgDimensions = bckgDimensions;
               }}
               nodePointerAreaPaint={(node, color, ctx) => {
                 ctx.fillStyle = color;
                 const bckgDimensions = node.__bckgDimensions;
-                bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
+                if (bckgDimensions) {
+                  ctx.fillRect(
+                    node.x - bckgDimensions[0] / 2,
+                    node.y - bckgDimensions[1] / 2,
+                    ...bckgDimensions
+                  );
+                }
               }}
             />,
             document.getElementById('graph')
           );
         });
-      }, [dataset]); // Re-run the effect whenever dataset changes
+      }, [dataset]);
 
       return (
         <div>
-          <div id="dropdown-container">
-            <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
-            <select id="dataset-select" value={dataset} onChange={handleDatasetChange} style={{ padding: "0px", fontSize: "16px" }}>
-              <option value="datasets/northeastern.json">Northeastern</option>
-              <option value="datasets/art_basel.json">Art Basel</option>
-              <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
-            </select>
-          </div>
+          <select value={dataset} onChange={handleDatasetChange}>
+            <option value="datasets/northeastern.json">Northeastern</option>
+            <option value="datasets/art_basel.json">Art Basel</option>
+            <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
+          </select>
         </div>
       );
     };
