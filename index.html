@@ -7,7 +7,7 @@
       align-items: center;
     }
     #dropdown-container {
-      margin: 20px;
+      margin: 10px;
     }
   </style>
 
@@ -45,7 +45,7 @@
               onEngineTick={() => {
                 if (graphRef.current) {
                   // Add collision force
-                  graphRef.current.d3Force('collide', node => Math.sqrt(node.size) + 5);
+                  graphRef.current.d3Force('collide', node => Math.sqrt(node.size) + 10);
                 }
               }}
               nodeCanvasObject={(node, ctx, globalScale) => {
@@ -88,7 +88,8 @@
       }, [dataset]);
 
       return (
-        <div>
+        <div id="dropdown-container">
+          <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
           <select value={dataset} onChange={handleDatasetChange}>
             <option value="datasets/northeastern.json">Northeastern</option>
             <option value="datasets/art_basel.json">Art Basel</option>
