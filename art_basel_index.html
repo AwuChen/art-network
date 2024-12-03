@@ -38,7 +38,7 @@
     ReactDOM.render(<Button />, document.getElementById('button-container'));
 
     // Fetch data and render the graph
-    fetch('datasets/northeastern.json').then(res => res.json()).then(data => {
+    fetch('datasets/art_basel.json').then(res => res.json()).then(data => {
       ReactDOM.render(
         <ForceGraph2D
           graphData={data}
