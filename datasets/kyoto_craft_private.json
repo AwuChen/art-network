@@ -9,7 +9,8 @@
     {"id": "Yoshida Shinichiro", "group": 1, "color": "purple", "size":9, "craft":"hemp", "website":"https://www.instagram.com/shinmyouan/"},
     {"id": "Shuji Nakagawa", "group": 1, "color": "red", "size":8, "craft":"wood", "website":"http://www.nakagawa-mokkougei.com/"},
     {"id": "Takahiro Yagi", "group": 1, "color": "red", "size":8, "craft":"tea caddie", "website":"https://www.kaikado.jp/"},
-    {"id": "Kenichi Hashimoto", "group": 1, "color": "purple", "size":8, "craft":"kaiseki", "website":"https://www.ryozanpaku.co.jp/"},
+    {"id": "Ishizuka Genta", "group": 1, "color": "red", "size":8, "craft":"urushi", "website":"https://theroom.loewe.com/en/artists/genta-ishizukahttps://chikuunsai.com/"},
+    {"id": "Kenichi Hashimoto", "group": 1, "color": "purple", "size":7, "craft":"kaiseki", "website":"https://www.ryozanpaku.co.jp/"},
     {"id": "Toru Tsuji", "group": 1, "color": "red", "size":7, "craft":"metal weaving", "website":"https://kanaamitsuji.net/"},
     {"id": "Toryo Ito", "group": 1, "color": "red", "size":7, "craft":"zazen", "website":"https://ryosokuin.com/"},
     {"id": "Tatsuyuki Kosuga", "group": 1, "color": "red", "size":6, "craft":"bamboo", "website":"https://www.kohchosai.co.jp/"},
@@ -142,12 +143,14 @@
 
     {"source": "Ako Myochin", "target": "Masataka Hosoo", "value": 3},
 
+    {"source": "Tanabe Chikunsai IV", "target": "Ishizuka Genta", "value": 5},
     {"source": "Tanabe Chikunsai IV", "target": "Nina Fradet", "value": 3},
     {"source": "Tanabe Chikunsai IV", "target": "Midori Tsukada", "value": 2},
     {"source": "Tanabe Chikunsai IV", "target": "Teruri Yamawaki", "value": 2},
     {"source": "Tanabe Chikunsai IV", "target": "Yoca Muta", "value": 2},
 
-    {"source": "Nina Fradet", "target": "Tanabe Chikunsai IV", "value": 2},
+    {"source": "Nina Fradet", "target": "Tanabe Chikunsai IV", "value": 4},
+    {"source": "Nina Fradet", "target": "Satoko Nakasone", "value": 1},
 
     {"source": "Teruri Yamawaki", "target": "Tanabe Chikunsai IV", "value": 2},
 
