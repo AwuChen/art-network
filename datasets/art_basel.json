@@ -1,5 +1,9 @@
 {
   "nodes": [
+    {"id": "Art Basel Switzerland", "group": 1, "color": "gold", "size":10},
+    {"id": "Art Basel Miami", "group": 1, "color": "gold", "size":8},
+    {"id": "Art Basel Hong Kong", "group": 1, "color": "gold",  "size":8},
+    {"id": "Art Basel Paris", "group": 1, "color": "gold", "size":5},
     {"id": "MoMA", "group": 1, "color": "red", "size":10},
     {"id": "Guggenheim", "group": 1, "color": "red", "size":8},
     {"id": "Gagosian Gallery", "group": 1, "color": "red",  "size":6},
@@ -69,6 +73,25 @@
 
   ],
   "links": [
+    {"source": "MoMA", "target": "Art Basel Miami", "value": 10},
+    {"source": "Guggenheim", "target": "Art Basel Miami", "value": 8},
+    {"source": "Gagosian Gallery", "target": "Art Basel Miami", "value": 8},
+    {"source": "MET", "target": "Art Basel Miami", "value": 5},
+    {"source": "Whitney", "target": "Art Basel Miami", "value": 5},
+    {"source": "Pace Gallery", "target": "Art Basel Miami", "value": 4},
+    {"source": "Pace Gallery", "target": "Art Basel Paris", "value": 3},
+    {"source": "Reina Sofia", "target": "Art Basel Switzerland", "value": 5},
+    {"source": "Reina Sofia", "target": "Art Basel Paris", "value": 5},
+    {"source": "Musée d'art contemporain de Montréal", "target": "Art Basel Paris", "value": 4}, 
+    {"source": "Musée d'art contemporain de Montréal", "target": "Art Basel Switzerland", "value": 4}, 
+    {"source": "LACMA", "target": "Art Basel Miami", "value": 3}, 
+    {"source": "M HKA", "target": "Art Basel Paris", "value": 2}, 
+    {"source": "Victoria and Albert Museum", "target": "Art Basel Paris", "value": 1}, 
+    {"source": "Mori Art Museum", "target": "Art Basel Hong Kong", "value": 2},
+    {"source": "Taipei Fine Arts Museum", "target": "Art Basel Hong Kong", "value": 1},
+
+
+
     {"source": "MoMA", "target": "Guggenheim", "value": 1},
     {"source": "Guggenheim", "target": "MoMA", "value": 8},
     {"source": "Gagosian Gallery", "target": "MoMA", "value": 7},
