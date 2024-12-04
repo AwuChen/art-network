@@ -60,6 +60,16 @@
     {"id": "Lee Ufan Art Museum", "group": 8, "size":8, "type":"museum", "website":"https://benesse-artsite.jp/en/art/lee-ufan.html"}
   ],
   "links": [
+    {"source": "Musée d'art contemporain de Montréal", "target": "Art Basel Paris", "value": 4}, 
+    {"source": "Musée d'art contemporain de Montréal", "target": "Art Basel Basel", "value": 4}, 
+    {"source": "LACMA", "target": "Art Basel Miami", "value": 3}, 
+    {"source": "M HKA", "target": "Art Basel Paris", "value": 2}, 
+    {"source": "Victoria and Albert Museum", "target": "Art Basel Paris", "value": 1}, 
+    {"source": "Mori Art Museum", "target": "Art Basel Hong Kong", "value": 2},
+    {"source": "Taipei Fine Arts Museum", "target": "Art Basel Hong Kong", "value": 1},
+
+    {"source": "Michael Rosenfeld Gallery", "target": "Frieze Los Angeles", "value": 3},   
+
     {"source": "MoMA", "target": "Guggenheim", "value": 1},
     {"source": "Guggenheim", "target": "MoMA", "value": 8},
     {"source": "Gagosian Gallery", "target": "MoMA", "value": 7},
@@ -74,7 +84,6 @@
     {"source": "Frissiras Museum", "target": "M HKA", "value": 3},
     {"source": "Michael Rosenfeld Gallery", "target": "Reina Sofia", "value": 1},
     {"source": "Taipei Fine Arts Museum", "target": "Mori Art Museum", "value": 1},
-    {"source": "Taipei Fine Arts Museum", "target": "Ma Galerie", "value": 3},
     {"source": "Taipei Fine Arts Museum", "target": "De Sarthe Gallery", "value": 2},
     {"source": "Victoria and Albert Museum", "target": "Gagosian Gallery", "value": 6},
     {"source": "Victoria and Albert Museum", "target": "MET", "value": 4},
@@ -90,7 +99,6 @@
     {"source": "MMOMA", "target": "Galerie Thaddaues Ropac", "value": 2},
     {"source": "MoMA", "target": "MMOMA", "value": 1},
     {"source": "Galerie Thaddaues Ropac", "target": "Pace Gallery", "value": 5},
-    {"source": "Zentrum Paul Klee", "target": "Galerie Thaddaues Ropac", "value": 3},
     {"source": "Art Antwerp", "target": "Pace Gallery", "value": 3},
     {"source": "Galerie Thaddaues Ropac", "target": "Art Antwerp", "value": 3},
     {"source": "MUMOK", "target": "MMOMA", "value": 3},
@@ -110,19 +118,18 @@
     {"source": "A-C-K", "target": "Kyocera Museum of Art", "value": 4},
     {"source": "A-C-K", "target": "National Art Center Tokyo", "value": 2},
     {"source": "A-C-K", "target": "National Museum of Modern Art Tokyo", "value": 2},
-    {"source": "A-C-K", "target": "Benesse House Museum", "value": 2},
-    {"source": "A-C-K", "target": "Chichu Art Museum", "value": 2},
-    {"source": "A-C-K", "target": "Lee Ufan Art Museum", "value": 2},
-    {"source": "A-C-K", "target": "21 Century Art Museum", "value": 1},
+
+    {"source": "A-C-K", "target": "Benesse House Museum", "value": 1},
+    {"source": "Benesse House Museum", "target": "Chichu Art Museum", "value": 2},
+    {"source": "Benesse House Museum", "target": "Lee Ufan Art Museum", "value": 2},
+
     {"source": "Taipei Dangdai", "target": "A-C-K", "value": 8},
     {"source": "Taipei Fine Arts Museum", "target": "Taipei Dangdai", "value": 5},    
     {"source": "National Museum of Modern Art Tokyo", "target": "Taipei Dangdai", "value": 5},
     {"source": "National Art Center Tokyo", "target": "Taipei Dangdai", "value": 5},
+    {"source": "National Art Center Tokyo", "target": "Art Basel Hong Kong", "value": 1},
     {"source": "Kaohsiung Museum of Fine Arts", "target": "Taipei Dangdai", "value": 5},
     {"source": "MOCA Taipei", "target": "Taipei Dangdai", "value": 5},
-    {"source": "NTNU Art Museum", "target": "Taipei Dangdai", "value": 3}    
-
-
-    
+    {"source": "NTNU Art Museum", "target": "Taipei Dangdai", "value": 3}   
   ]
 }
