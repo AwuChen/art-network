@@ -60,16 +60,6 @@
     {"id": "Lee Ufan Art Museum", "group": 8, "size":8, "type":"museum", "website":"https://benesse-artsite.jp/en/art/lee-ufan.html"}
   ],
   "links": [
-    {"source": "Musée d'art contemporain de Montréal", "target": "Art Basel Paris", "value": 4}, 
-    {"source": "Musée d'art contemporain de Montréal", "target": "Art Basel Basel", "value": 4}, 
-    {"source": "LACMA", "target": "Art Basel Miami", "value": 3}, 
-    {"source": "M HKA", "target": "Art Basel Paris", "value": 2}, 
-    {"source": "Victoria and Albert Museum", "target": "Art Basel Paris", "value": 1}, 
-    {"source": "Mori Art Museum", "target": "Art Basel Hong Kong", "value": 2},
-    {"source": "Taipei Fine Arts Museum", "target": "Art Basel Hong Kong", "value": 1},
-
-    {"source": "Michael Rosenfeld Gallery", "target": "Frieze Los Angeles", "value": 3},   
-
     {"source": "MoMA", "target": "Guggenheim", "value": 1},
     {"source": "Guggenheim", "target": "MoMA", "value": 8},
     {"source": "Gagosian Gallery", "target": "MoMA", "value": 7},
