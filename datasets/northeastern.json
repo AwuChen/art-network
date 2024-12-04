@@ -117,7 +117,6 @@
     {"source": "Taipei Fine Arts Museum", "target": "Taipei Dangdai", "value": 5},    
     {"source": "National Museum of Modern Art Tokyo", "target": "Taipei Dangdai", "value": 5},
     {"source": "National Art Center Tokyo", "target": "Taipei Dangdai", "value": 5},
-    {"source": "National Art Center Tokyo", "target": "Art Basel Hong Kong", "value": 1},
     {"source": "Kaohsiung Museum of Fine Arts", "target": "Taipei Dangdai", "value": 5},
     {"source": "MOCA Taipei", "target": "Taipei Dangdai", "value": 5},
     {"source": "NTNU Art Museum", "target": "Taipei Dangdai", "value": 3}   
