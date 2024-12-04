@@ -126,9 +126,9 @@
     {"source": "Art Basel Miami", "target": "Lee Ufan Art Museum", "value": 1},
     {"source": "Art Basel Hong Kong", "target": "Lee Ufan Art Museum", "value": 1},
 
-    {"source": "Art Basel Basel", "target": "The Broad", "value": 1},
-    {"source": "Art Basel Miami", "target": "The Broad", "value": 1},
-    {"source": "Art Basel Hong Kong", "target": "The Broad", "value": 1},
+    {"source": "Art Basel Basel", "target": "The Broad Art Museum", "value": 1},
+    {"source": "Art Basel Miami", "target": "The Broad Art Museum", "value": 1},
+    {"source": "Art Basel Hong Kong", "target": "The Broad Art Museum", "value": 1},
 
     {"source": "Art Basel Paris", "target": "21 21 Design Sight", "value": 1},    
 
