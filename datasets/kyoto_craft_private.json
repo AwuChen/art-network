@@ -1,5 +1,7 @@
 {
   "nodes": [
+    {"id": "Kutani Choemon", "group": 1, "color": "purple", "size":10, "type":"pottery", "website":"http://www.choemon.com/about"},
+    {"id": "Shinji Ohmaki", "group": 1, "color": "red", "size":9, "type":"artist", "website":"https://nact.jp/english/exhibition_special/2023/ohmaki/index.html"},
     {"id": "Masataka Hosoo", "group": 1, "color": "red", "size":9, "type":"kimono", "website":"https://www.hosoo.co.jp/en/story/"},
     {"id": "Theaster Gates", "group": 1, "color": "gold", "size":9, "type":"afro mingei", "website":"https://www.theastergates.com/"},
     {"id": "Kondaya Genbei", "group": 1, "color": "purple", "size":9, "type":"kimono", "website":"https://kondayagenbei.jp/"},
@@ -40,6 +42,9 @@
     {"id": "Teruri Yamawaki", "group": 3, "size":5, "type":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"}
   ],
   "links": [
+    {"source": "Shinji Ohmaki", "target": "Kutani Choemon", "value": 10},
+    {"source": "Kutani Choemon", "target": "Shinji Ohmaki", "value": 5},   
+
     {"source": "Masataka Hosoo", "target": "Yoshida Shinichiro", "value": 10},
     {"source": "Masataka Hosoo", "target": "Ako Myochin", "value": 4},    
     {"source": "Masataka Hosoo", "target": "Theaster Gates", "value": 3},  
