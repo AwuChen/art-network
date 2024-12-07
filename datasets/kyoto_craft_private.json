@@ -9,6 +9,7 @@
     {"id": "Tanabe Chikunsai IV", "group": 1, "color": "red", "size":8, "type":"bamboo", "website":"https://chikuunsai.com/"},
     {"id": "Masayo Funakoshi", "group": 1, "color": "red", "size":8, "type":"fusion cuisine", "website":"https://www.instagram.com/farmoon_kyoto/?hl=en"},
     {"id": "Yoshida Shinichiro", "group": 1, "color": "purple", "size":8, "type":"hemp", "website":"https://www.instagram.com/shinmyouan/"},
+    {"id": "Sputniko", "group": 1, "color": "purple", "size":8, "type":"AI video installation", "website":"https://sputniko.com/", "price":"7000"},
     {"id": "Shuji Nakagawa", "group": 1, "color": "red", "size":7, "type":"wood", "website":"http://www.nakagawa-mokkougei.com/"},
     {"id": "Takahiro Yagi", "group": 1, "color": "red", "size":7, "type":"tea caddie", "website":"https://www.kaikado.jp/"},
     {"id": "Ishizuka Genta", "group": 1, "color": "red", "size":7, "type":"urushi", "website":"https://gentaishizuka.com/"},
@@ -40,6 +41,7 @@
     {"id": "Nina Fradet", "group": 3, "size":5, "type":"bamboo", "website":"https://www.hinnstudio.com/"},
     {"id": "Hatta Shun", "group": 3, "size":5, "type":"kumihimo", "website":"https://showenkumihimo.com/"},
     {"id": "Teruri Yamawaki", "group": 3, "size":5, "type":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"}
+    
   ],
   "links": [
     {"source": "Shinji Ohmaki", "target": "Kutani Choemon", "value": 10},
