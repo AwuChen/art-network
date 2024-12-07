@@ -41,7 +41,7 @@
     {"id": "Nina Fradet", "group": 3, "size":5, "type":"bamboo", "website":"https://www.hinnstudio.com/"},
     {"id": "Hatta Shun", "group": 3, "size":5, "type":"kumihimo", "website":"https://showenkumihimo.com/"},
     {"id": "Teruri Yamawaki", "group": 3, "size":5, "type":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"}
-    
+
   ],
   "links": [
     {"source": "Shinji Ohmaki", "target": "Kutani Choemon", "value": 10},
@@ -50,6 +50,8 @@
     {"source": "Masataka Hosoo", "target": "Yoshida Shinichiro", "value": 10},
     {"source": "Masataka Hosoo", "target": "Ako Myochin", "value": 4},    
     {"source": "Masataka Hosoo", "target": "Theaster Gates", "value": 3},  
+    {"source": "Masataka Hosoo", "target": "Sputniko", "value": 2},
+
 
     {"source": "Yoshida Shinichiro", "target": "Masayo Funakoshi", "value": 1},
     {"source": "Yoshida Shinichiro", "target": "Takahiro Yagi", "value": 5},
@@ -98,6 +100,8 @@
     {"source": "Masaya Kushino", "target": "Shiho Fukuhara", "value": 4},
     {"source": "Masaya Kushino", "target": "Masataka Hosoo", "value": 3},
     {"source": "Masaya Kushino", "target": "Fukutaro Nakayama", "value": 3},
+    {"source": "Masaya Kushino", "target": "Sputniko", "value": 2},
+
 
     {"source": "Umi Chae", "target": "Shiho Fukuhara", "value": 10},
     {"source": "Umi Chae", "target": "Masaya Kushino", "value": 5},
@@ -150,6 +154,10 @@
     {"source": "Tanabe Chikunsai IV", "target": "Midori Tsukada", "value": 2},
     {"source": "Tanabe Chikunsai IV", "target": "Teruri Yamawaki", "value": 2},
     {"source": "Tanabe Chikunsai IV", "target": "Yoca Muta", "value": 2},
+
+    {"source": "Sputniko", "target": "Masataka Hosoo", "value": 2},
+    {"source": "Sputniko", "target": "Masaya Kushino", "value": 2},
+
 
     {"source": "Nina Fradet", "target": "Tanabe Chikunsai IV", "value": 4},
     {"source": "Nina Fradet", "target": "Satoko Nakasone", "value": 1},
