@@ -1,7 +1,7 @@
 {
   "nodes": [
     {"id": "Kutani Choemon", "group": 1, "color": "purple", "size":10, "type":"pottery", "website":"http://www.choemon.com/about"},
-    {"id": "Shinji Ohmaki", "group": 1, "color": "red", "size":9, "type":"artist", "website":"https://nact.jp/english/exhibition_special/2023/ohmaki/index.html"},
+    {"id": "Shinji Ohmaki", "group": 1, "color": "red", "size":9, "type":"artist", "website":"https://lumalabs.ai/capture/BD78455B-234E-45A1-A62B-57D8513D4B1D"},
     {"id": "Masataka Hosoo", "group": 1, "color": "red", "size":9, "type":"kimono", "website":"https://www.hosoo.co.jp/en/story/"},
     {"id": "Theaster Gates", "group": 1, "color": "gold", "size":9, "type":"afro mingei", "website":"https://www.theastergates.com/"},
     {"id": "Kondaya Genbei", "group": 1, "color": "purple", "size":9, "type":"kimono", "website":"https://kondayagenbei.jp/"},
