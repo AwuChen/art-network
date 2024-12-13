@@ -18,7 +18,9 @@
     {"id": "Toryo Ito", "group": 1, "color": "red", "size":6, "type":"zazen", "website":"https://ryosokuin.com/"},
     {"id": "Tatsuyuki Kosuga", "group": 1, "color": "red", "size":5, "type":"bamboo", "website":"https://www.kohchosai.co.jp/"},
     {"id": "Hidehiko Matsumoto", "group": 1, "color": "red",  "size":5, "type":"sake", "website":"https://sake.inc/"},
-    {"id": "Takafumi Zenryu Kawakami", "group": 1, "color": "red", "size":4, "type":"zazen", "website":"https://shunkoin.com/en/about"},
+    {"id": "Hana Tsukamoto", "group": 1, "size":5, "type":"Maana Homes", "website":"https://maanahomes.com/"},
+    {"id": "Tina Koyama", "group": 1, "color": "blue","size":5, "type":"POJ", "website":"https://pojstudio.com/pages/about"},
+    {"id": "Takafumi Zenryu Kawakami", "color": "green","group": 1, "color": "red", "size":4, "type":"zazen", "website":"https://shunkoin.com/en/about"},
     {"id": "Ko Kado", "group": 2, "size":10, "type":"karakami", "website":"https://kamisoe.com/en/index.html"},
     {"id": "Takaaki Murase", "group": 2, "size":10, "type":"plant", "website":"https://www.replanter.com/"},
     {"id": "Masaya Kushino", "group": 2, "size":10, "type":"shoes", "website":"https://www.instagram.com/masayakushino/?hl=en"},
@@ -168,7 +170,18 @@
 
     {"source": "Yoca Muta", "target": "Tanabe Chikunsai IV", "value": 2},
 
-    {"source": "Satoko Nakasone", "target": "Masayo Funakoshi", "value": 5}
+    {"source": "Satoko Nakasone", "target": "Masayo Funakoshi", "value": 5},
+
+    {"source": "Hosai Matsubayashi", "target": "Tina Koyama", "value": 5},
+    {"source": "Toru Tsuji", "target": "Tina Koyama", "value": 5},
+    {"source": "Takahiro Yagi", "target": "Tina Koyama", "value": 5},
+    {"source": "Hana Tsukamoto", "target": "Tina Koyama", "value": 1},
+
+    {"source": "Hosai Matsubayashi", "target": "Hana Tsukamoto", "value": 5},
+    {"source": "Toru Tsuji", "target": "Hana Tsukamoto", "value": 5},
+    {"source": "Takahiro Yagi", "target": "Hana Tsukamoto", "value": 5},
+    {"source": "Tina Koyama", "target": "Hana Tsukamoto", "value": 1}
+
 
   ]
 }
