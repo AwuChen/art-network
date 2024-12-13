@@ -42,7 +42,10 @@
     {"id": "Satoko Nakasone", "group": 3, "size":7, "type":"himelli", "website":"https://youtu.be/NzKeYoYShlQ?feature=shared"},
     {"id": "Nina Fradet", "group": 3, "size":5, "type":"bamboo", "website":"https://www.hinnstudio.com/"},
     {"id": "Hatta Shun", "group": 3, "size":5, "type":"kumihimo", "website":"https://showenkumihimo.com/"},
-    {"id": "Teruri Yamawaki", "group": 3, "size":5, "type":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"}
+    {"id": "Teruri Yamawaki", "group": 3, "size":5, "type":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"},
+    {"id": "Chen Chingming", "group": 3, "size":5, "type":"pottery", "website":"http://www.tianmeiart.org.tw/artists/chen-chingming.html"},
+    {"id": "Liu ChihHung", "group": 3, "size":5, "type":"pottery", "website":"http://www.tianmeiart.org.tw/artists/liu-chihhung.html"},
+    {"id": "Tianmei Art Foundation", "group": 1, "size":5, "type":"Art Foundation", "website":"http://www.tianmeiart.org/"}    
 
   ],
   "links": [
@@ -180,8 +183,10 @@
     {"source": "Hosai Matsubayashi", "target": "Hana Tsukamoto", "value": 5},
     {"source": "Toru Tsuji", "target": "Hana Tsukamoto", "value": 5},
     {"source": "Takahiro Yagi", "target": "Hana Tsukamoto", "value": 5},
-    {"source": "Tina Koyama", "target": "Hana Tsukamoto", "value": 1}
+    {"source": "Tina Koyama", "target": "Hana Tsukamoto", "value": 1},
 
+    {"source": "Liu ChihHung", "target": "Tianmei Art Foundation", "value": 5},
+    {"source": "Chen Chingming", "target": "Tianmei Art Foundation", "value": 5}
 
   ]
 }
