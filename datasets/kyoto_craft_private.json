@@ -33,8 +33,10 @@
     {"id": "Masato Kataoka", "group": 2, "size":5, "type":"hand crafted bike", "website":"https://vigore.co.jp/"},
     {"id": "Hirokazu Kato", "group": 2, "size":3, "type":"pottery", "website":"https://www.cerkato.com/"},
     {"id": "Akiteru Kawai", "group": 2, "size":2, "type":"yuzen dyeing", "website":"https://kawai1908.com/works/"},
+    {"id": "Yasuaki Kakehi", "group": 3, "size":10, "type":"material experience design", "https://xlab.iii.u-tokyo.ac.jp/"},
     {"id": "Umi Chae", "group": 3, "size":9, "type":"kinkou", "website":"https://hae.tokyo/en/"},
     {"id": "Shiho Fukuhara", "group": 3, "size":9, "type":"biology", "website":"https://hae.tokyo/en/"},
+    {"id": "Charles Lindsay", "group": 3, "size":9, "type":"AI", "website":"https://www.charleslindsay.com/"},    
     {"id": "Ako Myochin", "group": 3, "size":8, "type":"armour", "website":"https://yoroinoya.kyoto/"},
     {"id": "Fukutaro Nakayama", "group": 3, "size":8, "type":"tea ceremony", "website":"https://www.instagram.com/xexe.meditation/"},
     {"id": "Midori Tsukada", "group": 3, "size":7, "type":"glass", "website":"https://www.tsukadamidori.com/home/english/"},
@@ -53,10 +55,10 @@
     {"source": "Kutani Choemon", "target": "Shinji Ohmaki", "value": 5},   
 
     {"source": "Masataka Hosoo", "target": "Yoshida Shinichiro", "value": 10},
+    {"source": "Masataka Hosoo", "target": "Yasuaki Kakehi", "value": 8},    
     {"source": "Masataka Hosoo", "target": "Ako Myochin", "value": 4},    
     {"source": "Masataka Hosoo", "target": "Theaster Gates", "value": 3},  
     {"source": "Masataka Hosoo", "target": "Sputniko", "value": 2},
-
 
     {"source": "Yoshida Shinichiro", "target": "Masayo Funakoshi", "value": 1},
     {"source": "Yoshida Shinichiro", "target": "Takahiro Yagi", "value": 5},
@@ -121,7 +123,10 @@
     {"source": "Shiho Fukuhara", "target": "Fukutaro Nakayama", "value": 2},
 
     {"source": "Toryo Ito", "target": "Fukutaro Nakayama", "value": 7},
-    {"source": "Toryo Ito", "target": "Masataka Hosoo", "value": 2},    
+    {"source": "Toryo Ito", "target": "Masataka Hosoo", "value": 2},  
+
+    {"source": "Charles Lindsay", "target": "Toryo Ito", "value": 7},
+
 
     {"source": "Takafumi Zenryu Kawakami", "target": "Masataka Hosoo", "value": 5},
     {"source": "Takafumi Zenryu Kawakami", "target": "Hosai Matsubayashi", "value": 4},
@@ -180,13 +185,14 @@
     {"source": "Takahiro Yagi", "target": "Tina Koyama", "value": 5},
     {"source": "Hana Tsukamoto", "target": "Tina Koyama", "value": 1},
 
-    {"source": "Hosai Matsubayashi", "target": "Hana Tsukamoto", "value": 5},
-    {"source": "Toru Tsuji", "target": "Hana Tsukamoto", "value": 5},
-    {"source": "Takahiro Yagi", "target": "Hana Tsukamoto", "value": 5},
+    {"source": "Hosai Matsubayashi", "target": "Hana Tsukamoto", "value": 1},
+    {"source": "Toru Tsuji", "target": "Hana Tsukamoto", "value": 1},
+    {"source": "Takahiro Yagi", "target": "Hana Tsukamoto", "value": 1},
     {"source": "Tina Koyama", "target": "Hana Tsukamoto", "value": 1},
 
     {"source": "Liu ChihHung", "target": "Tianmei Art Foundation", "value": 5},
-    {"source": "Chen Chingming", "target": "Tianmei Art Foundation", "value": 5}
+    {"source": "Chen Chingming", "target": "Tianmei Art Foundation", "value": 5},
+
 
   ]
 }
