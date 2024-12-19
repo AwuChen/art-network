@@ -1,6 +1,6 @@
 {
   "nodes": [
-    {"id": "Kutani Choemon", "group": 1, "color": "purple", "size":10, "type":"pottery", "website":"http://www.choemon.com/about"},
+    {"id": "Kutani Choemon", "group": 1, "color": "purple", "size":9, "type":"pottery", "website":"http://www.choemon.com/about"},
     {"id": "Shinji Ohmaki", "group": 1, "color": "red", "size":9, "type":"artist", "website":"https://lumalabs.ai/capture/BD78455B-234E-45A1-A62B-57D8513D4B1D"},
     {"id": "Masataka Hosoo", "group": 1, "color": "red", "size":9, "type":"kimono", "website":"https://www.hosoo.co.jp/en/story/"},
     {"id": "Theaster Gates", "group": 1, "color": "gold", "size":9, "type":"afro mingei", "website":"https://www.theastergates.com/"},
@@ -9,7 +9,8 @@
     {"id": "Tanabe Chikunsai IV", "group": 1, "color": "red", "size":8, "type":"bamboo", "website":"https://chikuunsai.com/"},
     {"id": "Masayo Funakoshi", "group": 1, "color": "red", "size":8, "type":"fusion cuisine", "website":"https://www.instagram.com/farmoon_kyoto/?hl=en"},
     {"id": "Yoshida Shinichiro", "group": 1, "color": "purple", "size":8, "type":"hemp", "website":"https://www.instagram.com/shinmyouan/"},
-    {"id": "Sputniko", "group": 1, "color": "purple", "size":8, "type":"AI video installation", "website":"https://sputniko.com/", "price":"7000"},
+    {"id": "Yuriko Takagi", "group": 1, "color": "purple", "size":8, "type":"photography", "website":"https://yurikotakagi.com/"},
+    {"id": "Sputniko", "group": 1, "color": "purple", "size":7, "type":"AI video installation", "website":"https://sputniko.com/", "price":"7000"},
     {"id": "Shuji Nakagawa", "group": 1, "color": "red", "size":7, "type":"wood", "website":"http://www.nakagawa-mokkougei.com/"},
     {"id": "Takahiro Yagi", "group": 1, "color": "red", "size":7, "type":"tea caddie", "website":"https://www.kaikado.jp/"},
     {"id": "Ishizuka Genta", "group": 1, "color": "red", "size":7, "type":"urushi", "website":"https://gentaishizuka.com/"},
@@ -20,6 +21,7 @@
     {"id": "Hidehiko Matsumoto", "group": 1, "color": "red",  "size":5, "type":"sake", "website":"https://sake.inc/"},
     {"id": "Hana Tsukamoto", "group": 1, "size":5, "type":"Maana Homes", "website":"https://maanahomes.com/"},
     {"id": "Tina Koyama", "group": 1, "color": "blue","size":5, "type":"POJ", "website":"https://pojstudio.com/pages/about"},
+    {"id": "Tianmei Art Foundation", "group": 1, "size":5, "type":"Art Foundation", "website":"http://www.tianmeiart.org/"},
     {"id": "Takafumi Zenryu Kawakami", "color": "green","group": 1, "color": "red", "size":4, "type":"zazen", "website":"https://shunkoin.com/en/about"},
     {"id": "Ko Kado", "group": 2, "size":10, "type":"karakami", "website":"https://kamisoe.com/en/index.html"},
     {"id": "Takaaki Murase", "group": 2, "size":10, "type":"plant", "website":"https://www.replanter.com/"},
@@ -42,12 +44,13 @@
     {"id": "Midori Tsukada", "group": 3, "size":7, "type":"glass", "website":"https://www.tsukadamidori.com/home/english/"},
     {"id": "Yoca Muta", "group": 3, "size":7, "type":"ceramic", "website":"https://www.yocamuta.com/english"},
     {"id": "Satoko Nakasone", "group": 3, "size":7, "type":"himelli", "website":"https://youtu.be/NzKeYoYShlQ?feature=shared"},
+    {"id": "Nanao Kobayashi", "group": 3, "size":6, "type":"sculpture", "website":"https://www.nanaokobayashi.com/"},    
     {"id": "Nina Fradet", "group": 3, "size":5, "type":"bamboo", "website":"https://www.hinnstudio.com/"},
     {"id": "Hatta Shun", "group": 3, "size":5, "type":"kumihimo", "website":"https://showenkumihimo.com/"},
     {"id": "Teruri Yamawaki", "group": 3, "size":5, "type":"pottery", "website":"https://www.instagram.com/teruri.yamawaki/?hl=en"},
     {"id": "Chen Chingming", "group": 3, "size":5, "type":"pottery", "website":"http://www.tianmeiart.org.tw/artists/chen-chingming.html"},
     {"id": "Liu ChihHung", "group": 3, "size":5, "type":"pottery", "website":"http://www.tianmeiart.org.tw/artists/liu-chihhung.html"},
-    {"id": "Tianmei Art Foundation", "group": 1, "size":5, "type":"Art Foundation", "website":"http://www.tianmeiart.org/"}    
+    {"id": "Kaori Sasayama", "group": 3, "size":5, "type":"coordinator", "website":"https://www.rainbowsasa.com/en/about"}    
 
   ],
   "links": [
@@ -143,6 +146,11 @@
     {"source": "Masato Kataoka", "target": "Masataka Hosoo", "value": 1},
 
     {"source": "Kondaya Genbei", "target": "Ariko Inaoka", "value": 1},
+    {"source": "Kondaya Genbei", "target": "Kaori Sasayama", "value": 3},
+
+    {"source": "Kaori Sasayama", "target": "Nanao Kobayashi", "value": 5},
+
+    {"source": "Nanao Kobayashi", "target": "Yuriko Takagi", "value": 10},
 
     {"source": "Ariko Inaoka", "target": "Kondaya Genbei", "value": 1},
 
@@ -191,7 +199,7 @@
     {"source": "Tina Koyama", "target": "Hana Tsukamoto", "value": 1},
 
     {"source": "Liu ChihHung", "target": "Tianmei Art Foundation", "value": 5},
-    {"source": "Chen Chingming", "target": "Tianmei Art Foundation", "value": 5},
+    {"source": "Chen Chingming", "target": "Tianmei Art Foundation", "value": 5}
 
 
   ]
