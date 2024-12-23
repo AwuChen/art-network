@@ -7,6 +7,8 @@
 
     {"id": "Frieze Los Angeles", "group": 1, "color": "gold", "size":10, "type":"art fair", "website":"https://www.frieze.com/fairs/frieze-los-angeles"},
 
+    {"id": "Craft Fair Paris", "group": 1, "color": "gold", "size":2, "type":"art fair", "website":""},
+
     {"id": "MoMA", "group": 1, "color": "red", "size":10, "type":"museum", "website":"https://www.moma.org/"},
     {"id": "Guggenheim", "group": 1, "color": "red", "size":8, "type":"museum", "website":"https://www.guggenheim.org/"},
     {"id": "Gagosian Gallery", "group": 1, "color": "red",  "size":7, "type":"gallery", "website":"https://gagosian.com/"},
@@ -49,7 +51,8 @@
     {"id": "Kunsthalle Basel", "group": 7, "size":8, "type":"museum", "website":"https://www.kunsthallebasel.ch/"},
     {"id": "Art Gallery of Hamilton", "group": 7, "size":8, "type":"museum", "website":"https://www.artgalleryofhamilton.com/"},
     {"id": "Katonah Museum of Art", "group": 7, "size":5, "type":"museum", "website":"https://www.katonahmuseum.org/"},
-    {"id": "Foundation Louis Vuitton", "group": 7, "size":5, "type":"museum", "website":"https://www.fondationlouisvuitton.fr/en"},
+    {"id": "Foundation Louis Vuitton", "group": 7, "size":5, "type":"foundation", "website":"https://www.fondationlouisvuitton.fr/en"},
+    {"id": "Loewe Foundation", "group": 7, "size":5, "type":"foundation", "website":"https://www.loewe.com/jap/en/stories-loewe-foundation/loewe-foundation.html"},
     {"id": "MMOMA", "group": 8, "size":7, "type":"museum", "website":"https://mmoma.ru/en/"},
 
     {"id": "Taipei Dangdai", "group": 8, "size":10, "type":"art fair", "website":"https://taipeidangdai.com/"},
@@ -68,7 +71,8 @@
     {"id": "Lee Ufan Art Museum", "group": 8, "size":8, "type":"museum", "website":"https://benesse-artsite.jp/en/art/lee-ufan.html"},
     {"id": "Art Front Gallery", "group": 8, "size":6, "type":"gallery", "website":"https://artfrontgallery.com/en/", "manager":"Hideyuki Shoji"},
     {"id": "MAKI Gallery", "group": 8, "size":6, "type":"gallery", "website":"https://www.makigallery.com/"},
-    {"id": "Yume Koubou", "group": 8, "size":6, "type":"gallery", "website":"https://www.yumekoubou.cn/aboutartist"}
+    {"id": "Yume Koubou", "group": 8, "size":6, "type":"gallery", "website":"https://www.yumekoubou.cn/aboutartist"},
+    {"id": "Go For Kogei", "group": 8, "size":3, "type":"foundation", "website":"https://www.instagram.com/goforkogei/?hl=en"}
 
   ],
   "links": [
