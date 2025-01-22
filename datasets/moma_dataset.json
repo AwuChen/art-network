@@ -71,7 +71,7 @@
   ],
   "links": [
     {"source": "MoMA PS1", "target": "Marian Goodman Gallery", "value": 1},
-    {"source": "Marian Goodman Gallery", "target": "MoMa", "value": 1},
+    {"source": "Marian Goodman Gallery", "target": "MoMA", "value": 1},
     {"source": "MoMA", "target": "Gagosian", "value": 5}
   ]
 }
