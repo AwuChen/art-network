@@ -20,7 +20,8 @@
       "type": "museum",
       "website": "https://www.momaps1.org/en",
       "artists": [
-        {"name": "Thomas Schütte", "style": "Contemporary", "type": "group", "exhibition_date": "1987"}      ]
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "group", "exhibition_date": "1987"}      
+      ]
     },
     {
       "id": "New Museum",
@@ -64,13 +65,13 @@
       "type": "gallery",
       "website": "https://www.peterfreemaninc.com/",
       "artists": [
-        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2012,2015,2018,2021"},
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2012,2015,2018,2021"}
       ]
     }
   ],
   "links": [
     {"source": "MoMA PS1", "target": "Marian Goodman Gallery", "value": 1},
     {"source": "Marian Goodman Gallery", "target": "MoMa", "value": 1},
-    {"source": "MoMA", "target": "Gagosian", "value": 5},
+    {"source": "MoMA", "target": "Gagosian", "value": 5}
   ]
 }
