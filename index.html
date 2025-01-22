@@ -51,7 +51,7 @@
             if (node) {
               const artistInfo = node.artists
               ? node.artists
-              .map((a) => `${a.name} (${a.style}, ${a.exhibition_date})`)
+              .map((a) => `${a.name} (${a.type}, ${a.exhibition_date})`)
               .join('<br />')
               : 'No artist data';
               setModalContent(
