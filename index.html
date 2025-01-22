@@ -72,7 +72,7 @@
             // Draw node circle
             ctx.fillStyle = node.color;
             ctx.beginPath();
-            ctx.arc(node.x, node.y, node.size / 2, 0, 2 * Math.PI, false);
+            ctx.arc(node.x, node.y, node.size / node.group, 0, 2 * Math.PI, false);
             ctx.fill();
 
             // Draw institution name
