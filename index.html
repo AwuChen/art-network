@@ -23,31 +23,38 @@
   <div id="graph" style="z-index: 1;"></div>
   <script type="text/jsx">
     const App = () => {
-      const [dataset, setDataset] = React.useState('datasets/art_basel.json');
-      const [hoveredNode, setHoveredNode] = React.useState(null); // Track hovered node
-      const graphRef = React.useRef();
+  const [dataset, setDataset] = React.useState('datasets/test_dataset.json');
+  const graphRef = React.useRef();
 
-      const handleDatasetChange = (event) => {
-        setDataset(event.target.value);
-      };
+  const handleDatasetChange = (event) => {
+    setDataset(event.target.value);
+  };
 
-      React.useEffect(() => {
-        fetch(dataset).then(res => res.json()).then(data => {
-
-          ReactDOM.render(
-          <ForceGraph2D
+  React.useEffect(() => {
+    fetch(dataset).then((res) => res.json()).then((data) => {
+      ReactDOM.render(
+        <ForceGraph2D
           ref={graphRef}
           graphData={data}
           nodeAutoColorBy="group"
-          nodeLabel={node => `${node.id} (${node.type})`}
           linkWidth="value"
           linkDirectionalArrowRelPos={1}
           linkDirectionalArrowLength={5}
           linkCurvature={0.2}
-          onNodeHover={(node) => setHoveredNode(node)} // Track hovered node
+          nodeLabel={(node) => {
+            // If the node has artist data, format it for the hover label
+            if (node.artists && node.artists.length > 0) {
+              const artistInfo = node.artists
+                .map((a) => `${a.name} (${a.style})`) // Format: Name (Style)
+                .join(', ');
+              return `${node.id} (${node.type})\nArtists: ${artistInfo}`;
+            }
+            // Default label if no artist data is available
+            return `${node.id} (${node.type})\nNo artist data`;
+          }}
           onEngineTick={() => {
             if (graphRef.current) {
-              graphRef.current.d3Force('collide', node => Math.sqrt(node.size) + 10);
+              graphRef.current.d3Force('collide', (node) => Math.sqrt(node.size) + 10);
             }
           }}
           nodeCanvasObject={(node, ctx, globalScale) => {
@@ -66,39 +73,27 @@
             ctx.textBaseline = 'middle';
             ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
             ctx.fillText(label, node.x, node.y - fontSize - 5);
-
-            // Highlight hovered node's details
-            if (hoveredNode === node) {
-              const artistFontSize = fontSize * 0.7;
-              ctx.font = `${artistFontSize}px Sans-Serif`;
-              ctx.fillStyle = 'black';
-              const artistInfo = node.artists
-              ? node.artists
-              .slice(0, 3)
-              .map(a => `${a.name} (${a.style})`)
-              .join(', ')
-              : 'No artist data';
-              ctx.fillText(artistInfo, node.x, node.y + fontSize + 10); // Below the node
-            }
           }}
-          />,
-          document.getElementById('graph')
-          );
-        });
-      }, [dataset, hoveredNode]); // Re-render on dataset or hover change
-
-      return (
-      <div id="dropdown-container">
-        <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
-        <select value={dataset} onChange={handleDatasetChange}>
-          <option value="datasets/northeastern.json">Northeastern</option>
-          <option value="datasets/art_basel.json">Art Basel</option>
-          <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
-        </select>
-      </div>
+        />,
+        document.getElementById('graph')
       );
-    };
+    });
+  }, [dataset]);
 
-    ReactDOM.render(<App />, document.getElementById('dropdown-container'));
+  return (
+    <div id="dropdown-container">
+      <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
+      <select value={dataset} onChange={handleDatasetChange}>
+        <option value="datasets/test_dataset.json">Test</option>
+        <option value="datasets/northeastern.json">Northeastern</option>
+        <option value="datasets/art_basel.json">Art Basel</option>
+        <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
+      </select>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('dropdown-container'));
+
   </script>
 </body>
