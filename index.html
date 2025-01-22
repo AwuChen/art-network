@@ -23,7 +23,7 @@
   <div id="graph" style="z-index: 1;"></div>
   <script type="text/jsx">
     const App = () => {
-      const [dataset, setDataset] = React.useState('datasets/northeastern.json');
+      const [dataset, setDataset] = React.useState('datasets/test_dataset.json');
       const graphRef = React.useRef();
 
       const handleDatasetChange = (event) => {
@@ -32,76 +32,83 @@
 
       React.useEffect(() => {
         fetch(dataset).then(res => res.json()).then(data => {
-
-          function openWebsite(address){
-            if(address !== 'undefined')window.open(address, 'New Window', 'width=500px,height=500px')
+          function openWebsite(address) {
+            if (address !== 'undefined') window.open(address, 'New Window', 'width=500px,height=500px');
           }
 
           ReactDOM.render(
-          <ForceGraph2D
-          ref={graphRef}
-          graphData={data}
-          nodeAutoColorBy="group"
-          nodeLabel="type"
-          linkWidth="value"
-          linkDirectionalArrowRelPos={1}
-          linkDirectionalArrowLength={5}
-          linkCurvature={0.2}
-          onNodeClick={node => openWebsite(`${node.website}`)}
-          onEngineTick={() => {
-            if (graphRef.current) {
-              // Add collision force
-              graphRef.current.d3Force('collide', node => Math.sqrt(node.size) + 10);
-            }
-          }}
-          nodeCanvasObject={(node, ctx, globalScale) => {
-            const label = node.id;
-            const fontSize = node.size / node.group;
-            ctx.font = `${fontSize}px Sans-Serif`;
-            const textWidth = ctx.measureText(label).width;
-            const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
+            <ForceGraph2D
+              ref={graphRef}
+              graphData={data}
+              nodeAutoColorBy="group"
+              nodeLabel={node => `${node.id} (${node.type})`}
+              linkWidth="value"
+              linkDirectionalArrowRelPos={1}
+              linkDirectionalArrowLength={5}
+              linkCurvature={0.2}
+              onNodeClick={node => openWebsite(node.website)}
+              onNodeHover={(node) => {
+                if (node) {
+                  const artistInfo = node.artists
+                    ? node.artists.map(a => `${a.name} (${a.style}, ${a.exhibition_date})`).join('\n')
+                    : 'No artist data';
+                  alert(`Node: ${node.id}\n\nArtists:\n${artistInfo}`);
+                }
+              }}
+              onEngineTick={() => {
+                if (graphRef.current) {
+                  graphRef.current.d3Force('collide', node => Math.sqrt(node.size) + 10);
+                }
+              }}
+              nodeCanvasObject={(node, ctx, globalScale) => {
+                const label = node.id;
+                const fontSize = Math.max(8, node.size / 2);
+                ctx.font = `${fontSize}px Sans-Serif`;
+                const textWidth = ctx.measureText(label).width;
+                const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
 
-            // Draw node circle
-            ctx.fillStyle = node.color;
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, node.size / node.group, 0, 2 * Math.PI, false);
-            ctx.fill();
+                // Draw node circle
+                ctx.fillStyle = node.color;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.size / 2, 0, 2 * Math.PI, false);
+                ctx.fill();
 
-            // Draw node label
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
-            ctx.fillText(label, node.x, node.y);
+                // Draw node label
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
+                ctx.fillText(label, node.x, node.y);
 
-            // Save dimensions for interaction purposes
-            node.__bckgDimensions = bckgDimensions;
-          }}
-          nodePointerAreaPaint={(node, color, ctx) => {
-            ctx.fillStyle = color;
-            const bckgDimensions = node.__bckgDimensions;
-            if (bckgDimensions) {
-              ctx.fillRect(
-              node.x - bckgDimensions[0] / 2,
-              node.y - bckgDimensions[1] / 2,
-              ...bckgDimensions
-              );
-            }
-          }}
-          />,
-          document.getElementById('graph')
+                // Save dimensions for interaction purposes
+                node.__bckgDimensions = bckgDimensions;
+              }}
+              nodePointerAreaPaint={(node, color, ctx) => {
+                ctx.fillStyle = color;
+                const bckgDimensions = node.__bckgDimensions;
+                if (bckgDimensions) {
+                  ctx.fillRect(
+                    node.x - bckgDimensions[0] / 2,
+                    node.y - bckgDimensions[1] / 2,
+                    ...bckgDimensions
+                  );
+                }
+              }}
+            />,
+            document.getElementById('graph')
           );
         });
       }, [dataset]);
 
       return (
-      <div id="dropdown-container">
-        <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
-        <select value={dataset} onChange={handleDatasetChange}>
-          <option value="datasets/northeastern.json">Northeastern</option>
-          <option value="datasets/art_basel.json">Art Basel</option>
-          <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
-        </select>
-      </div>
+        <div id="dropdown-container">
+          <label htmlFor="dataset-select" style={{ marginRight: "10px" }}>Select Dataset:</label>
+          <select value={dataset} onChange={handleDatasetChange}>
+            <option value="datasets/test_dataset.json">Test</option>
+            <option value="datasets/northeastern.json">Northeastern</option>
+            <option value="datasets/art_basel.json">Art Basel</option>
+            <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>
+          </select>
+        </div>
       );
     };
 
