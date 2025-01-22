@@ -23,7 +23,7 @@
   <div id="graph" style="z-index: 1;"></div>
   <script type="text/jsx">
     const App = () => {
-      const [dataset, setDataset] = React.useState('datasets/test_dataset.json');
+      const [dataset, setDataset] = React.useState('datasets/moma_dataset.json');
       const [modalContent, setModalContent] = React.useState(null); // Track modal content
       const graphRef = React.useRef();
 
@@ -94,7 +94,7 @@
             Select Dataset:
           </label>
           <select value={dataset} onChange={handleDatasetChange}>
-            <option value="datasets/test_dataset.json">Testing</option>
+            <option value="datasets/moma_dataset.json">MoMA</option>
             <option value="datasets/northeastern.json">Northeastern</option>
             <option value="datasets/art_basel.json">Art Basel</option>
             <option value="datasets/kyoto_craft_private.json">Kyoto Craft</option>

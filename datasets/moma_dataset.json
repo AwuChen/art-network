@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "id": "MoMA",
+      "group": 1,
+      "color": "red",
+      "size": 10,
+      "type": "museum",
+      "website": "https://www.moma.org/",
+      "artists": [
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "group", "exhibition_date": "1996-02-01,1997-09-08,2001-04-05,2005-09-14,2009-04-22,2011-11-16,2012-02-19,2012-06-13,2015-07-27,2017-11-11"},
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2024-09-29"}
+      ]
+    },
+    {
+      "id": "MoMA PS1",
+      "group": 2,
+      "color": "red",
+      "size": 5,
+      "type": "museum",
+      "website": "https://www.momaps1.org/en",
+      "artists": [
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "group", "exhibition_date": "1987"}      ]
+    },
+    {
+      "id": "New Museum",
+      "group": 1,
+      "color": "red",
+      "size": 5,
+      "type": "museum",
+      "website": "https://newmuseum.org/",
+      "artists": [
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "group", "exhibition_date": "2008"}
+      ]
+    },
+    {
+      "id": "Gagosian",
+      "group": 1,
+      "color": "blue",
+      "size": 10,
+      "type": "gallery",
+      "website": "https://gagosian.com/",
+      "artists": [
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2025-01-22"}
+      ]
+    },
+    {
+      "id": "Marian Goodman Gallery",
+      "group": 2,
+      "color": "blue",
+      "size": 5,
+      "type": "gallery",
+      "website": "https://www.mariangoodman.com/",
+      "artists": [
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "1989,1990,1993,1996,1997,1999,2003,2005"},
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "1988"}
+      ]
+    },
+    {
+      "id": "Peter Freeman",
+      "group": 2,
+      "color": "blue",
+      "size": 5,
+      "type": "gallery",
+      "website": "https://www.peterfreemaninc.com/",
+      "artists": [
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2012,2015,2018,2021"},
+      ]
+    }
+  ],
+  "links": [
+    {"source": "MoMA PS1", "target": "Marian Goodman Gallery", "value": 1},
+    {"source": "Marian Goodman Gallery", "target": "MoMa", "value": 1},
+    {"source": "MoMA", "target": "Gagosian", "value": 5},
+  ]
+}
