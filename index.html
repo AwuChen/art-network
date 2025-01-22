@@ -55,7 +55,7 @@
               .join('<br />')
               : 'No artist data';
               setModalContent(
-              `<strong>Node:</strong> ${node.id}<br /><strong>Website:</strong> <a href="${node.website}" target="_blank">${node.website}</a><br /><strong>Artists:</strong><br />${artistInfo}`
+              `<strong>${node.type}:</strong> ${node.id}<br /><strong>Website:</strong> <a href="${node.website}" target="_blank">${node.website}</a><br /><strong>Artists:</strong><br />${artistInfo}`
               );
             }
           }}
