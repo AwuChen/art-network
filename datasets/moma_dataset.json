@@ -102,7 +102,7 @@
       "artists": [
         {"name": "Refik Anadol", "style": "AI", "type": "solo", "exhibition_date": "2021"}
       ]
-    },
+    }
   ],
   "links": [
     {"source": "MoMA PS1", "target": "Marian Goodman Gallery", "value": 1},
