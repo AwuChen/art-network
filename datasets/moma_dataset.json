@@ -9,7 +9,9 @@
       "website": "https://www.moma.org/",
       "artists": [
         {"name": "Thomas Schütte", "style": "Contemporary", "type": "group", "exhibition_date": "1996-02-01,1997-09-08,2001-04-05,2005-09-14,2009-04-22,2011-11-16,2012-02-19,2012-06-13,2015-07-27,2017-11-11"},
-        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2024-09-29"}
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2024-09-29"},
+        {"name": "Marlon Mullen", "style": "Contemporary", "type": "solo", "exhibition_date": "2024"},
+        {"name": "Refik Anadol", "style": "Contemporary", "type": "solo", "exhibition_date": "2021, 2022"}        
       ]
     },
     {
@@ -67,11 +69,47 @@
       "artists": [
         {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2012,2015,2018,2021"}
       ]
-    }
+    },
+    {
+      "id": "JTT",
+      "group": 2,
+      "color": "blue",
+      "size": 5,
+      "type": "gallery",
+      "website": "https://www.jttnyc.com/",
+      "artists": [
+        {"name": "Marlon Mullen", "style": "Contemporary", "type": "solo", "exhibition_date": "2015,2017,2019,2023"}
+      ]
+    },
+    {
+      "id": "White Columns",
+      "group": 2,
+      "color": "blue",
+      "size": 2,
+      "type": "gallery",
+      "website": "https://whitecolumns.org/",
+      "artists": [
+        {"name": "Marlon Mullen", "style": "Contemporary", "type": "solo", "exhibition_date": "2012"}
+      ]
+    },
+    {
+      "id": "Bitforms",
+      "group": 2,
+      "color": "blue",
+      "size": 2,
+      "type": "gallery",
+      "website": "https://bitforms.art/",
+      "artists": [
+        {"name": "Refik Anadol", "style": "AI", "type": "solo", "exhibition_date": "2021"}
+      ]
+    },
   ],
   "links": [
     {"source": "MoMA PS1", "target": "Marian Goodman Gallery", "value": 1},
     {"source": "Marian Goodman Gallery", "target": "MoMA", "value": 1},
-    {"source": "MoMA", "target": "Gagosian", "value": 5}
+    {"source": "MoMA", "target": "Gagosian", "value": 5},
+    {"source": "JTT", "target": "MoMA", "value": 1},
+    {"source": "White Columns", "target": "JTT", "value": 1},   
+    {"source": "Bitforms", "target": "MoMA", "value": 1}
   ]
 }
