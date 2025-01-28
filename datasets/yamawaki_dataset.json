@@ -1,0 +1,126 @@
+{
+  "nodes": [
+    {
+      "id": "Ceramic Brussels",
+      "group": 2,
+      "color": "yellow",
+      "size": 5,
+      "type": "artfair",
+      "website": "https://www.artbrussels.com/en/",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": "2024, 2025"},
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2024-09-29"},
+        {"name": "Marlon Mullen", "style": "Contemporary", "type": "solo", "exhibition_date": "2024"},
+        {"name": "Refik Anadol", "style": "Contemporary", "type": "solo", "exhibition_date": "2021, 2022"}        
+      ],
+      "exhibitors": [
+        {"name": "SPAX", "style": "Craft", "type": "main", "exhibition_date": "2024"}
+      ]
+    },
+    {
+      "id": "Collect Art Fair",
+      "group": 1,
+      "color": "yellow",
+      "size": 5,
+      "type": "artfair",
+      "website": "https://www.craftscouncil.org.uk/collect-fair",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": "2025"},
+        {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2024-09-29"},
+        {"name": "Marlon Mullen", "style": "Contemporary", "type": "solo", "exhibition_date": "2024"},
+        {"name": "Refik Anadol", "style": "Contemporary", "type": "solo", "exhibition_date": "2021, 2022"}        
+      ],
+      "exhibitors": [
+        {"name": "AIFA", "style": "Craft", "type": "main", "exhibition_date": "2025"}
+      ]
+    },
+    {
+      "id": "A-C-K",
+      "group": 1,
+      "color": "yellow",
+      "size": 5,
+      "type": "artfair",
+      "website": "https://a-c-k.jp/en",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "satelite", "exhibition_date": "2024"}
+      ],
+      "curators": [
+        {"name": "Akimoto Yuji", "style": "Craft", "type": "satelite", "exhibition_date": "2024"}
+      ]
+    },
+    {
+      "id": "Asia Now Paris",
+      "group": 2,
+      "color": "yellow",
+      "size": 5,
+      "type": "artfair",
+      "website": "https://asianowparis.com/",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": "2024"}
+      ],
+      "curators": [
+
+      ],
+      "exhibitors": [
+        {"name": "AIFA", "style": "Craft", "type": "main", "exhibition_date": "2024"}
+      ]
+    },
+    {
+      "id": "21st Century Museum Kanazawa",
+      "group": 1,
+      "color": "red",
+      "size": 5,
+      "type": "museum",
+      "website": "https://www.kanazawa21.jp/en/",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": "2024"}
+      ]
+    },
+    {
+      "id": "AIFA",
+      "group": 1,
+      "color": "blue",
+      "size": 5,
+      "type": "gallery",
+      "website": "https://www.aifa.art/",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": ""},
+        {"name": "Kenji Gomi", "style": "Craft", "type": "group", "exhibition_date": ""},
+        {"name": "Namika Nakai", "style": "Craft", "type": "group", "exhibition_date": ""}
+      ]
+    },
+    {
+      "id": "SPAX projects",
+      "group": 1,
+      "color": "yellow",
+      "size": 1,
+      "type": "collector/gallery",
+      "website": "https://www.spaxprojects.com/",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": ""}
+      ]
+    },
+    {
+      "id": "Kanazawa Utatsuyama Kogei Kobo",
+      "group": 1,
+      "color": "green",
+      "size": 5,
+      "type": "residency",
+      "website": "https://www.utatsu-kogei.gr.jp/english/",
+      "artists": [
+        {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": ""},
+        {"name": "Kenji Gomi", "style": "Craft", "type": "group", "exhibition_date": ""},
+        {"name": "Namika Nakai", "style": "Craft", "type": "group", "exhibition_date": ""}
+      ]
+    }
+  ],
+  "links": [
+    {"source": "Kanazawa Utatsuyama Kogei Kobo", "target": "21st Century Museum Kanazawa", "value": 2},
+    {"source": "21st Century Museum Kanazawa", "target": "A-C-K", "value": 2},
+
+    {"source": "SPAX", "target": "Ceramic Brussels", "value": 1},
+    {"source": "AIFA", "target": "Ceramic Brussels", "value": 2},
+    {"source": "AIFA", "target": "Collect Art Fair", "value": 1},   
+    {"source": "AIFA", "target": "Asia Now Paris", "value": 2}
+  ]
+}
