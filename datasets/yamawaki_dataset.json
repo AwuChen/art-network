@@ -14,7 +14,7 @@
         {"name": "Refik Anadol", "style": "Contemporary", "type": "solo", "exhibition_date": "2021, 2022"}        
       ],
       "exhibitors": [
-        {"name": "SPAX", "style": "Craft", "type": "main", "exhibition_date": "2024"}
+        {"name": "SPAX Projects", "style": "Craft", "type": "main", "exhibition_date": "2024"}
       ]
     },
     {
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "id": "SPAX projects",
+      "id": "SPAX Projects",
       "group": 1,
       "color": "yellow",
       "size": 1,
@@ -118,7 +118,7 @@
     {"source": "Kanazawa Utatsuyama Kogei Kobo", "target": "21st Century Museum Kanazawa", "value": 2},
     {"source": "21st Century Museum Kanazawa", "target": "A-C-K", "value": 2},
 
-    {"source": "SPAX", "target": "Ceramic Brussels", "value": 1},
+    {"source": "SPAX Projects", "target": "Ceramic Brussels", "value": 1},
     {"source": "AIFA", "target": "Ceramic Brussels", "value": 2},
     {"source": "AIFA", "target": "Collect Art Fair", "value": 1},   
     {"source": "AIFA", "target": "Asia Now Paris", "value": 2}
