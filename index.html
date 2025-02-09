@@ -53,7 +53,7 @@
               ? node.artists
               .map((a) => `${a.name} (${a.type}, ${a.exhibition_date})`)
               .join('<br />')
-              : 'No artist data';
+              : 'No access to artist data';
               setModalContent(
               `<strong>${node.type.charAt(0).toUpperCase() + node.type.slice(1)}:</strong> ${node.id}<br /><strong>Website:</strong> <a href="${node.website}" target="_blank">${node.website}</a><br /><strong>Artists:</strong><br />${artistInfo}`
               );

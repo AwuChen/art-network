@@ -6,7 +6,7 @@
       "color": "yellow",
       "size": 5,
       "type": "artfair",
-      "website": "https://www.artbrussels.com/en/",
+      "website": "https://www.ceramic.brussels/en",
       "artists": [
         {"name": "Teruri Yamawaki", "style": "Craft", "type": "group", "exhibition_date": "2024, 2025"},
         {"name": "Thomas Schütte", "style": "Contemporary", "type": "solo", "exhibition_date": "2024-09-29"},
