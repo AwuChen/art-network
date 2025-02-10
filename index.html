@@ -23,67 +23,64 @@
   <div id="graph" style="z-index: 1;"></div>
   <script type="text/jsx">
     const App = () => {
-      const [dataset, setDataset] = React.useState('datasets/northeastern.json');
-      const [modalContent, setModalContent] = React.useState(null); // Track modal content
-      const graphRef = React.useRef();
+  const [graphData, setGraphData] = React.useState({ nodes: [], links: [] });
+  const graphRef = React.useRef();
 
-      const handleDatasetChange = (event) => {
-        setDataset(event.target.value);
+  React.useEffect(() => {
+    fetch("datasets/kyoto_craft_private.json")
+      .then((res) => res.json())
+      .then((data) => setGraphData(data));
+  }, []);
+
+  // Function to add a new node when NFC card is tapped
+  const addNewNode = (newNode) => {
+    setGraphData((prevData) => {
+      const updatedNodes = [...prevData.nodes, newNode];
+      const updatedLinks = [
+        ...prevData.links,
+        { source: newNode.id, target: "Existing Node", value: 5 }, // Example link
+      ];
+      return { nodes: updatedNodes, links: updatedLinks };
+    });
+  };
+
+  React.useEffect(() => {
+    // Check for NFC tap event (e.g., query parameter in URL)
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("nfc")) {
+      const newNode = {
+        id: `User-${Date.now()}`,
+        group: 1,
+        color: "blue",
+        size: 6,
+        type: "NFC User",
+        website: "#"
       };
+      addNewNode(newNode);
+    }
+  }, []);
 
-      const closeModal = () => setModalContent(null); // Close modal handler
+  return (
+    <ForceGraph2D
+      ref={graphRef}
+      graphData={graphData}
+      nodeAutoColorBy="group"
+      nodeLabel={(node) => `${node.id} (${node.type})`}
+      linkDirectionalArrowRelPos={1}
+      linkDirectionalArrowLength={5}
+      nodeCanvasObject={(node, ctx) => {
+        ctx.fillStyle = node.color;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = "black";
+        ctx.fillText(node.id, node.x + 10, node.y);
+      }}
+    />
+  );
+};
 
-      React.useEffect(() => {
-        fetch(dataset)
-        .then((res) => res.json())
-        .then((data) => {
-          ReactDOM.render(
-          <ForceGraph2D
-          ref={graphRef}
-          graphData={data}
-          nodeAutoColorBy="group"
-          nodeLabel={(node) => `${node.id} (${node.type})`}
-          linkWidth="value"
-          linkDirectionalArrowRelPos={1}
-          linkDirectionalArrowLength={5}
-          linkCurvature={0.2}
-          onNodeClick={(node) => {
-            if (node) {
-              const artistInfo = node.artists
-              ? node.artists
-              .map((a) => `${a.name} (${a.type}, ${a.exhibition_date})`)
-              .join('<br />')
-              : 'No access to artist data';
-              setModalContent(
-              `<strong>${node.type.charAt(0).toUpperCase() + node.type.slice(1)}:</strong> ${node.id}<br /><strong>Website:</strong> <a href="${node.website}" target="_blank">${node.website}</a><br /><strong>Artists:</strong><br />${artistInfo}`
-              );
-            }
-          }}
-          onEngineTick={() => {
-            if (graphRef.current) {
-              graphRef.current.d3Force('collide', (node) => Math.sqrt(node.size) + 10);
-            }
-          }}
-          nodeCanvasObject={(node, ctx, globalScale) => {
-            const label = node.id;
-            const fontSize = Math.max(8, node.size / 2);
-            ctx.font = `${fontSize}px Sans-Serif`;
-
-            // Draw node circle
-            ctx.fillStyle = node.color;
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, node.size / node.group, 0, 2 * Math.PI, false);
-            ctx.fill();
-
-            // Draw institution name
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
-            ctx.fillText(label, node.x, node.y);
-          }}
-          />,
-          document.getElementById('graph')
-          );
+ReactDOM.render(<App />, document.getElementById("graph"));
         });
       }, [dataset]);
 
