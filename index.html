@@ -28,64 +28,53 @@
 
   <script type="text/jsx">
     const App = () => {
-      const [graphData, setGraphData] = React.useState({ nodes: [], links: [] });
-      const graphRef = React.useRef();
+  const [graphData, setGraphData] = React.useState({ nodes: [], links: [] });
+  const graphRef = React.useRef();
 
-      React.useEffect(() => {
-        fetch("datasets/kyoto_craft_private.json")
-          .then((res) => res.json())
-          .then((data) => setGraphData(data));
-      }, []);
-
-      // Function to add a new node when NFC card is tapped
-      const addNewNode = (newNode) => {
-        setGraphData((prevData) => {
-          const updatedNodes = [...prevData.nodes, newNode];
-          const updatedLinks = [
-            ...prevData.links,
-            { source: newNode.id, target: "Existing Node", value: 5 }, // Example link
-          ];
-          return { nodes: updatedNodes, links: updatedLinks };
-        });
+  // Function to add a new node and connect it to the last added node
+  const addNewNode = () => {
+    setGraphData((prevData) => {
+      const newNode = {
+        id: `Node-${prevData.nodes.length + 1}`,
+        color: "blue",
+        size: 6
       };
+      const updatedNodes = [...prevData.nodes, newNode];
+      const updatedLinks = prevData.nodes.length > 0 ?
+        [...prevData.links, { source: newNode.id, target: prevData.nodes[prevData.nodes.length - 1].id }] :
+        prevData.links;
+      return { nodes: updatedNodes, links: updatedLinks };
+    });
+  };
 
-      React.useEffect(() => {
-        // Check for NFC tap event (e.g., query parameter in URL)
-        const params = new URLSearchParams(window.location.search);
-        if (params.has("nfc")) {
-          const newNode = {
-            id: `User-${Date.now()}`,
-            group: 1,
-            color: "blue",
-            size: 6,
-            type: "NFC User",
-            website: "#"
-          };
-          addNewNode(newNode);
-        }
-      }, []);
+  React.useEffect(() => {
+    // Check for NFC tap event (e.g., query parameter in URL)
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("nfc")) {
+      addNewNode();
+    }
+  }, []);
 
-      return (
-        <ForceGraph2D
-          ref={graphRef}
-          graphData={graphData}
-          nodeAutoColorBy="group"
-          nodeLabel={(node) => `${node.id} (${node.type})`}
-          linkDirectionalArrowRelPos={1}
-          linkDirectionalArrowLength={5}
-          nodeCanvasObject={(node, ctx) => {
-            ctx.fillStyle = node.color;
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI);
-            ctx.fill();
-            ctx.fillStyle = "black";
-            ctx.fillText(node.id, node.x + 10, node.y);
-          }}
-        />
-      );
-    };
+  return (
+    <ForceGraph2D
+      graphData={graphData}
+      nodeAutoColorBy="group"
+      nodeLabel={(node) => node.id}
+      linkDirectionalArrowRelPos={1}
+      linkDirectionalArrowLength={5}
+      nodeCanvasObject={(node, ctx) => {
+        ctx.fillStyle = node.color;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = "black";
+        ctx.fillText(node.id, node.x + 10, node.y);
+      }}
+    />
+  );
+};
 
-    ReactDOM.render(<App />, document.getElementById("graph"));
+ReactDOM.render(<App />, document.getElementById("graph"));
   </script>
 </body>
 </html>
