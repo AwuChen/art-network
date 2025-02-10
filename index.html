@@ -27,7 +27,7 @@
   <div id="graph" style="z-index: 1;"></div>
 
   <script type="text/jsx">
-    const App = () => {
+const App = () => {
   const [graphData, setGraphData] = React.useState({ nodes: [], links: [] });
   const graphRef = React.useRef();
 
@@ -47,30 +47,41 @@
     });
   };
 
+  // Listen for NFC tap dynamically
   React.useEffect(() => {
-    // Check for NFC tap event (e.g., query parameter in URL)
-    const params = new URLSearchParams(window.location.search);
-    if (params.has("nfc")) {
-      addNewNode();
-    }
+    const checkForNFCTap = () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("nfc")) {
+        addNewNode();
+        params.delete("nfc");
+        window.history.replaceState({}, "", `${window.location.pathname}`); // Clear URL param
+      }
+    };
+
+    checkForNFCTap();
+    window.addEventListener("popstate", checkForNFCTap);
+    return () => window.removeEventListener("popstate", checkForNFCTap);
   }, []);
 
   return (
-    <ForceGraph2D
-      graphData={graphData}
-      nodeAutoColorBy="group"
-      nodeLabel={(node) => node.id}
-      linkDirectionalArrowRelPos={1}
-      linkDirectionalArrowLength={5}
-      nodeCanvasObject={(node, ctx) => {
-        ctx.fillStyle = node.color;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.fillStyle = "black";
-        ctx.fillText(node.id, node.x + 10, node.y);
-      }}
-    />
+    <div>
+      <button onClick={addNewNode} style={{ marginBottom: "10px" }}>Simulate NFC Tap</button>
+      <ForceGraph2D
+        graphData={graphData}
+        nodeAutoColorBy="group"
+        nodeLabel={(node) => node.id}
+        linkDirectionalArrowRelPos={1}
+        linkDirectionalArrowLength={5}
+        nodeCanvasObject={(node, ctx) => {
+          ctx.fillStyle = node.color;
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, node.size, 0, 2 * Math.PI);
+          ctx.fill();
+          ctx.fillStyle = "black";
+          ctx.fillText(node.id, node.x + 10, node.y);
+        }}
+      />
+    </div>
   );
 };
 
